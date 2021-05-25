@@ -1,8 +1,8 @@
-        <!-- sidebar-main に切り出す -->
-        <div class="sidebar">
-            <div class="form-search">
-            <form action="#" id="courses_search_form" class="courses_search_form d-flex flex-row align-items-center justify-content-start">
-                <input type="search" class="courses_search_input" required="required" />
+　　　　<div class="sidebar">
+        <div class="form-search">
+        <form action="<?php echo home_url(); ?>" method = "get"  id="courses_search_form" class="courses_search_form d-flex flex-row align-items-center justify-content-start">
+        <input type="search" name="s" value="<?php the_search_query(); ?>" class="courses_search_input" required="required" placeholder="検索文字を入力">
+
                 <button action="submit" class="courses_search_button">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
@@ -52,4 +52,4 @@
             </div>
             </div>
         </div>
-        <!-- sidebar-main ここまで -->
+        sidebar-main ここまで

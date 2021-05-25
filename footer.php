@@ -1,6 +1,5 @@
-    <!-- footer.php ここから -->
- <!-- footer.php ここから -->
- <footer class="footer">
+<!-- footer.php ここから -->
+<footer class="footer">
       <div class="row footer_row">
         <div class="col">
           <div class="footer_content">
@@ -72,9 +71,25 @@
   </div>
 
   <?php wp_footer(); ?>
+
   <script type="text/javascript">
     $(".carousel").carousel();
   </script>
-</body>
+
+      <script type="text/javascript">
+       //WordPressにおけるjQueryの書き方
+        jQuery(function($){
+          $('.count_num').counterUp({
+          delay: 10,
+          time: 1000
+          });
+        });
+      </script>
+
+      <script>　
+        AOS.init();
+      </script>
+
+  </body>
 
 </html>

@@ -97,11 +97,12 @@
 
 
                         <!-- News Posts Small -->
-                        <div class="news_post_small">
+                        <div class="news_post_small" data-aos="fade-up" data-aos-delay="200">
                             <div class="news_post_meta">
                                 <ul>
                                     <li>
-                                    <a href="<?php echo get_permalink(); //aタグで投稿記事へのリンクを作成し、日付を出力する ?>">                                       <?php echo get_the_date(); ?>
+                                    <a href="<?php echo get_permalink(); //aタグで投稿記事へのリンクを作成し、日付を出力する ?>">
+                                    <?php echo get_the_date(); ?>
                                     </a>
                                 </li>
 
@@ -135,7 +136,8 @@
                     ?>
                     <?php if ( $event_query->have_posts() ): ?>
                     <?php while ( $event_query->have_posts()) : $event_query->the_post() ; ?>
-                    <div class="news_post_small">
+                    <div class="news_post_small" data-aos="fade-up" data-aos-delay="200">
+
                         <div class="row news_post_row">
                             <div class="col-lg-3 col-md-4 col-sx-12">
                             <div class="calendar_border">
@@ -190,7 +192,7 @@
                 </div>
                 <div class="row courses_row">
                     <!-- Course -->
-                    <div class="col-lg-4 course_col">
+                    <div class="col-lg-4 course_col" data-aos="fade-up" data-aos-delay="200">
                         <div class="course">
                             <div class="course_image">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/pic5-3.png" alt="" />
@@ -212,7 +214,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 course_col">
+                    <div class="col-lg-4 course_col" data-aos="fade-up" data-aos-delay="200">
                         <div class="course">
                             <div class="course_image">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/pic5-2.jpg" alt="" />
@@ -234,7 +236,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 course_col">
+                    <div class="col-lg-4 course_col" data-aos="fade-up" data-aos-delay="200">
                         <div class="course">
                             <div class="course_image">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/pic5-4.png" alt="" />
@@ -270,7 +272,8 @@
                                     <div class="milestone_counter">
                                         <p>教授数</p>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/icon4.png" alt="" />
-                                        <span class="milestone_number">335</span><span class="milestone_count">名</span>
+                                        <span class="count_num milestone_number" id="teacher_num">335</span><span class="milestone_count">名</span>
+
                                     </div>
                                 </div>
 
@@ -279,7 +282,7 @@
                                     <div class="milestone_counter">
                                         <p>卒業生徒</p>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/icon3.png" alt="" />
-                                        <span class="milestone_number">4526</span><span class="milestone_count">名</span>
+                                        <span class="count_num milestone_number"id="student_num">4526</span><span class="milestone_count">名</span>
                                     </div>
                                 </div>
 
@@ -288,7 +291,7 @@
                                     <div class="milestone_counter">
                                         <p>学習コース</p>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/icon2.png" alt="" />
-                                        <span class="milestone_number">12</span><span class="milestone_count">コース</span>
+                                        <span class="count_num milestone_number" id="course_num">12</span><span class="milestone_count">コース</span>
                                     </div>
                                 </div>
 
@@ -297,7 +300,7 @@
                                     <div class="milestone_counter">
                                         <p>受賞</p>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/icon1.png" alt="" />
-                                        <span class="milestone_number">35</span><span class="milestone_count">回</span>
+                                        <span class="count_num milestone_number" id="award_num">35</span><span class="milestone_count">回</span>
                                     </div>
                                 </div>
                             </div>
@@ -337,7 +340,7 @@
                 <?php if ($campus_query->have_posts()) : ?>
                 <?php while ($campus_query->have_posts()) : $campus_query->the_post(); ?>
         <!-- Course -->
-                <div class="col-lg-4 course_col">
+            <div class="col-lg-4 course_col" data-aos="fade-up" data-aos-delay="200">
             <div class="course">
                 <div class="course_image">
                 <?php if (has_post_thumbnail()) : ?>
